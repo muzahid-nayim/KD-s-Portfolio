@@ -1,0 +1,18 @@
+/* static/css/style.css */
+/* Custom CSS for additional styling */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Custom portfolio item hover effects */
+.portfolio-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
