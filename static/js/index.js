@@ -198,53 +198,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // =====================START ABOUT SECTION ===================
-// About section animations
-function initAboutSection() {
-    // Intersection Observer for scroll animations
-    const aboutObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
-            }
-        });
-    }, { threshold: 0.1 });
 
-    // Observe elements for animation
-    const animatedElements = document.querySelectorAll('.about-visual, .about-text, .exp-card, .skills-section, .personal-note');
-    animatedElements.forEach(el => aboutObserver.observe(el));
-
-    // Button hover effects
-    const aboutButtons = document.querySelectorAll('.about-btn');
-    aboutButtons.forEach(button => {
-        button.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-2px)';
-        });
-        
-        button.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
-        });
-    });
-
-    // Skill tags interaction
-    const skillTags = document.querySelectorAll('.skill-tag');
-    skillTags.forEach(tag => {
-        tag.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-2px) scale(1.05)';
-        });
-        
-        tag.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
-    });
-}
-
-// Initialize about section
-document.addEventListener('DOMContentLoaded', function() {
-    // Your existing initialization code...
-    
-    // Initialize about section
-    initAboutSection();
-});
 // =====================END ABOUT SECTION =====================
 
 // =====================START PROJECT SECTION ===================
